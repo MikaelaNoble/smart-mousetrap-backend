@@ -8,6 +8,9 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
+// Allow incoming data as url-encoded (form data)
+app.use(express.urlencoded({ extended: true }));
+
 let trapStatus = "Trap is empty";  // Default status
 
 // // Endpoint to check trap status
