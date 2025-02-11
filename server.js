@@ -33,7 +33,7 @@ let trapStatus = "Trap is empty";  // Default status
 
 
 app.post('/voiceCommand', (req, res) => {
-    const { command } = req.body;
+    const { command } = req.query; 
     
     if (!command) {
         return res.status(400).json({ error: "No command received" });
